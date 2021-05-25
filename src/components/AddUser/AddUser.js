@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, Fragment } from 'react'
 import Card from '../UI/Card'
 import Button from '../UI/Button'
 import Modal from '../UI/Modal'
@@ -55,7 +55,7 @@ function AddUser(props){
     }
 
     return (
-        <div>
+        <Fragment>
             {error && <Modal title={error.title} message={error.message} onDismissError={dissmissErrorHandler}/>}
             
             <Card className={classes.input}>
@@ -71,7 +71,7 @@ function AddUser(props){
 
                 </form>
             </Card>
-        </div>
+        </Fragment>
     )
 }
 
